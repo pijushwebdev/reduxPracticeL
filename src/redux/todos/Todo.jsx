@@ -10,6 +10,7 @@ const Todo = () => {
         onClick={() =>
           dispatch({
             type: "todos/todoAdded",
+            payload: 'learning redux'
           })
         }
       >

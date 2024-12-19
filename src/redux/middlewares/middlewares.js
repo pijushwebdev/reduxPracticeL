@@ -3,13 +3,13 @@
 
 // eslint-disable-next-line no-unused-vars
 export const fetchTodoMiddleware = (store) => (next) => async (action) => {
-   
+   console.log('delay applying');
     if(action.type === 'todos/todoAdded'){
         
         setTimeout(() => {
             next(action)
         }, 2000)
-        console.log('fetched');
+        console.log('checked');
         return;
     }
 
