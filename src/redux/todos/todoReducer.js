@@ -4,11 +4,11 @@ const initialState = {
 
 export const todoReducer = (state = initialState, action) => {
     switch (action.type) {
-        case 'todos/todoFetched':
+        case 'todos/todoAdded':
             
             return {
                 ...state,
-                todos: [ ...state.todos,action.payload ]
+                todos: [ ...state.todos,...action.payload ]
             }
     
         default:
